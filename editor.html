@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FH2 Editor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>FH2 Hotspot Editor</h1>
+      <p class="subtitle">Drag markers with the mouse, then export JSON</p>
+    </div>
+    <nav class="top-actions">
+      <a href="index.html" class="ghost-btn">Open Viewer</a>
+    </nav>
+  </header>
+
+  <main class="editor-shell">
+    <section class="viewer-card editor-card">
+      <div class="image-stage editor-stage" id="editorStage">
+        <img id="editorMainImage" src="images/main-map.jpg" alt="Main presentation image" />
+        <div id="editorHotspotLayer" class="hotspot-layer"></div>
+      </div>
+    </section>
+
+    <section class="editor-panel">
+      <div class="editor-toolbar">
+        <button id="addImageBtn" class="primary-btn">Add Image Hotspot</button>
+        <button id="addVideoBtn" class="primary-btn alt">Add Video Hotspot</button>
+        <button id="exportBtn" class="ghost-btn">Export JSON</button>
+        <button id="resetBtn" class="ghost-btn warning">Reset Demo Data</button>
+      </div>
+
+      <div class="editor-help">
+        <h2>How it works</h2>
+        <ol>
+          <li>Add a hotspot.</li>
+          <li>Drag it with the mouse to the correct place.</li>
+          <li>Edit label, type, and file path.</li>
+          <li>Export JSON and replace <code>data.json</code> in GitHub.</li>
+        </ol>
+      </div>
+
+      <div id="editorList" class="editor-list"></div>
+    </section>
+  </main>
+
+  <script src="editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FH2 Video Present</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>FH2 Video Present</h1>
+      <p class="subtitle">Mouse-click hotspots on the main image</p>
+    </div>
+    <nav class="top-actions">
+      <a href="editor.html" class="ghost-btn">Open Editor</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="viewer-card">
+      <div class="image-stage" id="imageStage">
+        <img id="mainImage" src="images/main-map.jpg" alt="Main presentation image" />
+        <div id="hotspotLayer" class="hotspot-layer"></div>
+      </div>
+      <aside class="legend-panel">
+        <h2>Items</h2>
+        <p>Click a marker on the image or choose from the list.</p>
+        <div id="itemList" class="item-list"></div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="mediaModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-dialog">
+      <button class="close-btn" id="closeModal" aria-label="Close">×</button>
+      <div class="modal-header">
+        <h3 id="modalTitle">Preview</h3>
+      </div>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
